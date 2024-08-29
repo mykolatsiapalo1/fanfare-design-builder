@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "./components/Button/Button";
+import ButtonEdit from "./components/Button/ButtonEdit";
 
 export default function Home() {
   const handleClick = () => {
@@ -17,6 +18,7 @@ export default function Home() {
       <Button onClick={handleClick} size="large">
         Large Button
       </Button>
+      <ButtonEdit onClick={handleClick} />
     </main>
   );
 }
