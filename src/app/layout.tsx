@@ -1,14 +1,18 @@
-import React from "react";
+import Sidebar from "./components/Sidebar/Sidebar";
 import "./globals.css";
+import { ReactNode } from "react";
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+export default function Layout({ children }: LayoutProps) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="flex">
+        <Sidebar />
+        <main className="flex-1">{children}</main>
+      </body>
     </html>
   );
 }
