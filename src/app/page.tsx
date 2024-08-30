@@ -1,10 +1,9 @@
 "use client";
 
 import Button from "./components/Button/Button";
-import ButtonEdit from "./components/Button/ButtonEdit";
 import ActionButtons from "./components/FutterBar/ActionButtons";
-import Modal from "./components/Modal/Modal";
 import { useRef } from "react";
+import ProductSettingsPanel from "./components/ProductSettingsPanel/ProductSettingsPanel";
 
 export default function Home() {
   const modalRef = useRef<{ openModal: () => void }>(null);
@@ -20,24 +19,21 @@ export default function Home() {
       modalRef.current.openModal();
     }
   };
+
   return (
-    <main className="">
-      <Button onClick={handleClick} size="small">
-        Small Button
-      </Button>
-    
-
-      <ButtonEdit onClick={handleClick} />
-
-      <Button onClick={handleOpenModal} size="small">
-        Open
-      </Button>
-
-      <Modal ref={modalRef} onClose={handleModalClose}>
-        <h3 className="font-bold text-lg">Hello!</h3>
-        <p className="py-4">This is a reusable modal with custom content.</p>
-        <button className="btn">Another button inside modal</button>
-      </Modal>
+    <main className="relative min-h-screen">
+      {/* <div className="absolute top-4 right-4 flex flex-row gap-2 z-50">
+        <Button onClick={handleClick} size="small">
+          Save
+        </Button>
+        <Button onClick={handleClick} size="small">
+          Duplicate
+        </Button>
+        <Button onClick={handleClick} size="small">
+          Clear
+        </Button>
+      </div> */}
+      <ProductSettingsPanel />
 
       <ActionButtons />
     </main>

@@ -7,6 +7,11 @@
     margin: 0;
 }
 
+.popular-label::before {
+    @apply absolute top-0 left-1/2 -translate-x-1/2 bg-violet-600 text-white px-2 py-1 rounded-full text-xs font-semibold w-4/5 w-full text-center;
+    content: "Most Popular";
+}
+
 body {
     background-color: #fafafa;
 }
