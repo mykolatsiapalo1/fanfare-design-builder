@@ -32,24 +32,12 @@ const Button: React.FC<ButtonProps> = ({
       buttonClass = "bg-white text-black hover:bg-fuchsia-50 active:scale-95";
   }
 
-  switch (size) {
-    case "small":
-      sizeClass = "px-2 py-1 text-sm";
-      break;
-    case "medium":
-      sizeClass = "px-4 py-2";
-      break;
-    case "large":
-      sizeClass = "px-6 py-3 text-lg";
-      break;
-    default:
-      sizeClass = "px-4 py-2";
-  }
+  sizeClass = "px-4 py-2 text-base w-32 h-10";
 
   return (
     <button
       onClick={onClick}
-      className={`${buttonClass} ${sizeClass} rounded border border-gray-300 transition-transform duration-150 ease-in-out ${className}`}
+      className={`${buttonClass} ${sizeClass} rounded-xl border border-gray-300 transition-transform duration-150 ease-in-out flex items-center justify-center ${className}`}
     >
       {children}
     </button>

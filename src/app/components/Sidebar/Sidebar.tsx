@@ -15,7 +15,7 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <div className="w-72 bg-fuchsia-50 h-full flex flex-col p-4">
+    <div className="w-72 bg-fuchsia-50 h-full flex flex-col p-4 overflow-y-auto">
       <SidebarSection
         title="Most Used"
         icon={IoMdStarOutline}
