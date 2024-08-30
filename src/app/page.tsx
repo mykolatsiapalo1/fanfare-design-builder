@@ -1,24 +1,26 @@
 "use client";
 
+import { useRef } from "react";
 import Button from "./components/Button/Button";
 import ActionButtons from "./components/FutterBar/ActionButtons";
-import { useRef } from "react";
-
 import SettingsPanel from "./components/ProductSettingsPanel/SettingsPanel";
+import SizeSelectorModal, {
+  SizeSelectorModalRef,
+} from "./components/Upload/Upload";
 
 export default function Home() {
-  const modalRef = useRef<{ openModal: () => void }>(null);
+  const modalRef = useRef<SizeSelectorModalRef>(null);
 
   const handleClick = () => {
     console.log("Click");
   };
+
   const handleModalClose = () => {
     console.log("Modal closed");
   };
+
   const handleOpenModal = () => {
-    if (modalRef.current) {
-      modalRef.current.openModal();
-    }
+    modalRef.current?.openModal();
   };
 
   return (
@@ -30,14 +32,15 @@ export default function Home() {
         <Button onClick={handleClick} size="small">
           Duplicate
         </Button>
-        <Button onClick={handleClick} size="small">
-          Clear
+        <Button onClick={handleOpenModal} size="small">
+          Open Size Selector
         </Button>
       </div> */}
-      {/* <ProductSettingsPanel /> */}
-      <SettingsPanel />
 
+      <SettingsPanel />
       <ActionButtons />
+
+      <SizeSelectorModal ref={modalRef} onClose={handleModalClose} />
     </main>
   );
 }
