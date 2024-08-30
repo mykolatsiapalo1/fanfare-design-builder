@@ -3,7 +3,8 @@
 import Button from "./components/Button/Button";
 import ActionButtons from "./components/FutterBar/ActionButtons";
 import { useRef } from "react";
-import ProductSettingsPanel from "./components/ProductSettingsPanel/ProductSettingsPanel";
+
+import SettingsPanel from "./components/ProductSettingsPanel/SettingsPanel";
 
 export default function Home() {
   const modalRef = useRef<{ openModal: () => void }>(null);
@@ -33,7 +34,8 @@ export default function Home() {
           Clear
         </Button>
       </div> */}
-      <ProductSettingsPanel />
+      {/* <ProductSettingsPanel /> */}
+      <SettingsPanel />
 
       <ActionButtons />
     </main>
