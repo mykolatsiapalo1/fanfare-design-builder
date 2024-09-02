@@ -1,6 +1,7 @@
 import React from "react";
+import { SizeCardProps } from "../../types/index";
 
-const SizeCard = ({ size, isPopular }) => {
+const SizeCard = ({ size, isPopular }: SizeCardProps) => {
   return (
     <div
       className={`border rounded-lg p-4 flex flex-col items-center relative ${

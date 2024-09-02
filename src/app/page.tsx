@@ -4,9 +4,9 @@ import { useRef } from "react";
 import Button from "./components/Button/Button";
 import ActionButtons from "./components/FutterBar/ActionButtons";
 import SettingsPanel from "./components/ProductSettingsPanel/SettingsPanel";
-import SizeSelectorModal, {
-  SizeSelectorModalRef,
-} from "./components/Upload/Upload";
+import SizeSelectorModal from "./components/Upload/Upload";
+import { SizeSelectorModalRef } from "./types/index";
+import SidebarMini from "./components/Sidebar/SidebarMini";
 
 export default function Home() {
   const modalRef = useRef<SizeSelectorModalRef>(null);
@@ -36,6 +36,8 @@ export default function Home() {
           Open Size Selector
         </Button>
       </div> */}
+
+      {/* <SidebarMini /> */}
 
       <SettingsPanel />
       <ActionButtons />

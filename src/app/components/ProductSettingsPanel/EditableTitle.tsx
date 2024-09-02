@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import Button from "../Button/Button";
 import EditButton from "../Button/ButtonEdit";
-
-interface EditableTitleProps {
-  initialTitle: string;
-  onSave: (newTitle: string) => void;
-}
+import { EditableTitleProps } from "../../types/index";
 
 const EditableTitle: React.FC<EditableTitleProps> = ({
   initialTitle,

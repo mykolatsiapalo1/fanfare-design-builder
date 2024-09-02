@@ -1,7 +1,7 @@
 import React from "react";
-import EditableTitle from "./EditableTitle";
-import ButtonGroup from "./ButtonGroup";
-import Button from "../Button/Button";
+import EditableTitle from "../EditableTitle";
+import ButtonGroup from "../ButtonGroup";
+import Button from "../../Button/Button";
 import Image from "next/image";
 
 const TagsContent: React.FC = () => {

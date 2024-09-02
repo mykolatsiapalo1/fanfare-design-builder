@@ -1,19 +1,7 @@
 import React from "react";
 import SidebarItem from "./SidebarItem";
-import { IconType } from "react-icons";
 
-interface SidebarSectionProps {
-  title: string;
-  icon?: IconType;
-  items: {
-    icon: IconType;
-    label: string;
-    count?: number;
-    showEditIcon?: boolean;
-  }[];
-  onItemClick?: (label: string) => void;
-  activeItem?: string | null; 
-}
+import { SidebarSectionProps } from "../../types/index";
 
 const SidebarSection: React.FC<SidebarSectionProps> = ({
   title,

@@ -5,16 +5,13 @@ import React, {
   useCallback,
 } from "react";
 import { Search } from "lucide-react";
+import {
+  SizeSelectorModalRef,
+  SizeSelectorModalProps,
+} from "../../types/index";
 
 const categories = ["Backdrops", "Florals", "Foils", "Pedestals", "Props"];
 
-interface SizeSelectorModalProps {
-  onClose: () => void;
-}
-
-export interface SizeSelectorModalRef {
-  openModal: () => void;
-}
 
 const SizeSelectorModal = forwardRef<
   SizeSelectorModalRef,

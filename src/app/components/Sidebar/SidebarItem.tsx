@@ -1,16 +1,7 @@
 import React from "react";
-import { IconType } from "react-icons";
-import { MdOutlineModeEdit } from "react-icons/md";
 
-interface SidebarItemProps {
-  icon: IconType;
-  label: string;
-  href?: string;
-  count?: number;
-  showEditIcon?: boolean;
-  isActive?: boolean;
-  onClick?: () => void;
-}
+import { MdOutlineModeEdit } from "react-icons/md";
+import { SidebarItemProps } from "../../types/index";
 
 const SidebarItem: React.FC<SidebarItemProps> = ({
   icon: Icon,

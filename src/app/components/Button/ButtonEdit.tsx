@@ -1,8 +1,6 @@
 import { MdOutlineEdit } from "react-icons/md";
+import { EditButtonProps } from "../../types/index";
 
-interface EditButtonProps {
-  onClick: () => void;
-}
 
 const EditButton: React.FC<EditButtonProps> = ({ onClick }) => {
   return (

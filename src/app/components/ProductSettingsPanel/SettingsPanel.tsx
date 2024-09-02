@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 import { FaCog } from "react-icons/fa";
+
 import TabBar from "./TabBar";
-import SettingsContent from "./SettingsContent";
-import TagsContent from "./TagsContent";
-import VariantsContent from "./VariantsContent";
-import PhotosContent from "./PhotosContent";
+import SettingsContent from "./Tabs/SettingsContent";
+import TagsContent from "./Tabs/TagsContent";
+import VariantsContent from "./Tabs/VariantsContent";
+import PhotoGallery from "../PhotoGallery/PhotoGallery";
 
 const SettingsPanel: React.FC = () => {
   const [activeTab, setActiveTab] = useState("settings");
-
   const tabs = [
     { id: "settings", icon: <FaCog className="h-5 w-5" /> },
     { id: "tags", label: "Tags" },
     { id: "variants", label: "Variants" },
     { id: "photos", label: "Photos" },
   ];
-
   const renderContent = () => {
     switch (activeTab) {
       case "settings":
@@ -25,7 +24,7 @@ const SettingsPanel: React.FC = () => {
       case "variants":
         return <VariantsContent />;
       case "photos":
-        return <PhotosContent />;
+        return <PhotoGallery />;
       default:
         return null;
     }

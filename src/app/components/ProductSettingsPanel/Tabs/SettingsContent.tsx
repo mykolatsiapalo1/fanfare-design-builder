@@ -1,6 +1,6 @@
 import React from "react";
-import EditableTitle from "./EditableTitle";
-import ButtonGroup from "./ButtonGroup";
+import EditableTitle from "../EditableTitle";
+import ButtonGroup from "../ButtonGroup";
 
 const SettingsContent: React.FC = () => {
   const handleTitleSave = (newTitle: string) => {
@@ -10,7 +10,7 @@ const SettingsContent: React.FC = () => {
   return (
     <div className="space-y-4">
       <EditableTitle initialTitle="Displayed Name" onSave={handleTitleSave} />
-      
+
       <ButtonGroup
         title="Assign Main Menu Section"
         buttons={["Backdrops", "Garlands", "Freestanding"]}
@@ -21,9 +21,15 @@ const SettingsContent: React.FC = () => {
           Subcategory for Search/Sorting
         </h4>
         <div className="space-y-2">
-          <ButtonGroup title="Walls" buttons={["Greenery", "Floral", "Shimmer"]} />
+          <ButtonGroup
+            title="Walls"
+            buttons={["Greenery", "Floral", "Shimmer"]}
+          />
           <ButtonGroup title="Chiaras" buttons={["Wooden", "Cloth", "Luxe"]} />
-          <ButtonGroup title="Piping/Framing" buttons={["Square", "Hoop", "Unique"]} />
+          <ButtonGroup
+            title="Piping/Framing"
+            buttons={["Square", "Hoop", "Unique"]}
+          />
           <ButtonGroup title="Custom" buttons={["Other", "Other", "Other"]} />
         </div>
       </div>

@@ -1,9 +1,7 @@
 import { forwardRef, useImperativeHandle, useRef, ReactNode } from "react";
+import { ModalProps } from "../../types/index";
 
-interface ModalProps {
-  onClose: () => void;
-  children: ReactNode;
-}
+
 
 const Modal = forwardRef<{ openModal: () => void }, ModalProps>(
   ({ onClose, children }, ref) => {

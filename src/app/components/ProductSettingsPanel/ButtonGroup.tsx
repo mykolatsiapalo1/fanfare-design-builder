@@ -1,16 +1,12 @@
 import React from "react";
 import Button from "../Button/Button";
-
-interface ButtonGroupProps {
-  title: string;
-  buttons: string[];
-}
+import { ButtonGroupProps } from "../../types/index";
 
 const ButtonGroup: React.FC<ButtonGroupProps> = ({ title, buttons }) => {
   return (
     <div>
       <h4 className="text-sm font-medium mb-2">{title}</h4>
-      <div className="flex space-x-2">
+      <div className="flex space-x-2 text-nowrap">
         {buttons.map((button, index) => (
           <Button key={index}>{button}</Button>
         ))}

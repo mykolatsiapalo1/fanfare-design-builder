@@ -1,16 +1,5 @@
 import React from "react";
-
-interface Tab {
-  id: string;
-  icon?: React.ReactNode;
-  label?: string;
-}
-
-interface TabBarProps {
-  tabs: Tab[];
-  activeTab: string;
-  setActiveTab: (tabId: string) => void;
-}
+import { TabBarProps, Tab } from "../../types/index";
 
 const TabBar: React.FC<TabBarProps> = ({ tabs, activeTab, setActiveTab }) => {
   return (

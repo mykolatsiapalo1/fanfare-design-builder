@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../Button/Button";
-import SizeCard from "../Card/SizeCard";
+import Button from "../../Button/Button";
+import SizeCard from "../../Card/SizeCard";
 
 const VariantsContent: React.FC = () => (
   <div className="space-y-6">
